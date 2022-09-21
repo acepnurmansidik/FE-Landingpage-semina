@@ -14,9 +14,15 @@ const CardEvent = ({ data, title, subTitle }) => {
             <div className="col-lg-3 col-md-6 col-12" key={index}>
               <div className="card-grow h-100">
                 <span className="badge-pricing">
-                  {data.tickets[0].price === 0
-                    ? "free"
-                    : `$${data.tickets[0].price}`}
+                  {data.tickets.map((t, subIndex) => (
+                    <div key={t._id}>
+                      {t.statusTicketCategories
+                        ? t.price === 0
+                          ? "free"
+                          : `$ ${t.price}`
+                        : ""}
+                    </div>
+                  ))}
                 </span>
                 <img
                   src={`${process.env.NEXT_PUBLIC_API}/${data.image.name}`}
