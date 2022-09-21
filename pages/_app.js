@@ -2,7 +2,6 @@
 /* eslint-disable @next/next/no-css-tags */
 import "../styles/globals.css";
 import "../styles/main.css";
-import Head from "next/head";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

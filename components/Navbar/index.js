@@ -16,7 +16,6 @@ const Navbar = () => {
   });
 
   const handleLogout = () => {
-    console.log("click");
     Cookies.remove("token");
     router.push("/");
   };
