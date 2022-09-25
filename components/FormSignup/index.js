@@ -6,15 +6,15 @@ import { useRouter } from "next/router";
 import { postData, putData } from "../../utils/fetchData";
 import { toast } from "react-toastify";
 
-const FormSignin = () => {
+const FormSignup = () => {
   const router = useRouter();
   const { keyword } = router.query;
   const [otp, setOtp] = useState("");
   const [form, setForm] = useState({
     email: "",
     password: "",
-    firstName: "",
-    lastName: "",
+    firstname: "",
+    lastname: "",
     role: "",
   });
 
@@ -77,16 +77,16 @@ const FormSignin = () => {
           <TextInput
             label={"First Name"}
             type={"text"}
-            value={form.firstName}
-            name="firstName"
+            value={form.firstname}
+            name="firstname"
             placeholder="First name here"
             onChange={handleChange}
           />
           <TextInput
             label={"Last Name"}
             type={"text"}
-            name="lastName"
-            value={form.lastName}
+            name="lastname"
+            value={form.lastname}
             placeholder="First name here"
             onChange={handleChange}
           />
@@ -129,4 +129,4 @@ const FormSignin = () => {
   );
 };
 
-export default FormSignin;
+export default FormSignup;

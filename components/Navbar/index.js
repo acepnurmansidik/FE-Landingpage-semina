@@ -4,7 +4,6 @@ import Link from "next/link";
 import NavLink from "../NavLink";
 import { useRouter } from "next/router";
 import Cookies from "js-cookie";
-import Button from "../Button";
 
 const Navbar = () => {
   const router = useRouter();
