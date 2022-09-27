@@ -54,7 +54,11 @@ export default function DetailPage({ detailPage, id }) {
 
       <div className="preview-image bg-navy text-center">
         <img
-          src="/images/details-image.png"
+          src={
+            `${process.env.NEXT_PUBLIC_API}/${detailPage?.image?.name}`
+              ? `${process.env.NEXT_PUBLIC_API}/${detailPage?.image?.name}`
+              : "/images/details-image.png"
+          }
           className="img-content"
           alt="semina"
         />
