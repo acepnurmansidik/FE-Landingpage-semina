@@ -3,9 +3,9 @@ import axios from "../configs";
 export const getData = (url, params, token) => {
   return axios.get(`${url}`, {
     params,
-    // headers: {
-    //   Authorization: `Bearer ${token}`,
-    // },
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
   });
 };
 
